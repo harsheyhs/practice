@@ -1,0 +1,363 @@
+/* #453750, #998FC7, #D4C2FC, #F9F5FF, #EDF0DA
+*/
+:root {
+  --darkest: #453750;
+  --darker: #998FC7;
+  --dark: #D4C2FC;
+  --light: #F9F5FF;
+  --filler: #EDF0DA;
+}
+
+body {
+  background: var(--light);
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+  background: var(--filler);
+  padding: 1em;
+}
+.navbar .logo {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--darkest);
+  font-size: 1.2em;
+}
+.navbar nav {
+  display: none;
+}
+.navbar .container {
+  display: flex;
+  place-content: space-between;
+}
+.navbar .mobile-menu {
+  cursor: pointer;
+}
+
+a {
+  color: var(--darkest);
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+.hero {
+  text-align: center;
+}
+
+.left-col .subhead {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--darker);
+  letter-spacing: 0.3em;
+}
+.left-col h1 {
+  font-size: 2.5em;
+  line-height: 1.3em;
+  margin-top: 0.2em;
+  color: var(--darkest);
+}
+.left-col .primary-cta {
+  background: var(--darker);
+  color: var(--light);
+  text-decoration: none;
+  padding: 0.6em 1.3em;
+  font-size: 1em;
+  border-radius: 5em;
+  font-weight: bold;
+  display: inline-block;
+}
+.left-col .watch-video-cta {
+  display: block;
+  margin-top: 2em;
+}
+.left-col .watch-video-cta img {
+  margin-right: 0.5em;
+}
+
+.hero-img {
+  width: 70%;
+  margin-top: 3em;
+}
+
+section.features {
+  background: var(--darkest);
+  color: var(--light);
+}
+
+ul.features-list {
+  margin: 0;
+  padding-left: 0.1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+}
+ul.features-list li {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  margin-left: 2em;
+  position: relative;
+}
+ul.features-list li:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/bullet.svg);
+  background-size: contain;
+  margin-right: 0.5em;
+  left: -2em;
+}
+
+.features img {
+  display: none;
+}
+
+.testimonials {
+  background: var(--darker);
+  color: var(--darkest);
+}
+.testimonials ul li {
+  background: var(--dark);
+  text-align: center;
+  padding: 2em 1em;
+  width: 80%;
+  margin: 0 auto 5em auto;
+  border-radius: 2em;
+}
+.testimonials ul li img {
+  width: 5em;
+  height: 5em;
+  border: 2px solid var(--darkest);
+  border-radius: 50%;
+  margin-top: -4.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.contact-section {
+  color: var(--darkest);
+  padding-top: 2em;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.8em;
+  margin-bottom: 1em;
+  border-radius: 0.3em;
+  border: 1px solid var(--darkest);
+  box-sizing: border-box;
+}
+
+.send-msg {
+  background-color: var(--darker);
+  color: var(--light);
+  font-weight: bold;
+  font-size: 1em;
+  padding: 0.6em 2em;
+  border: none;
+  margin-bottom: 5em;
+  border-radius: 5em;
+  display: inline-block;
+  width: unset;
+  cursor: pointer;
+}
+
+iframe {
+  width: 100%;
+  height: 300px;
+}
+
+nav.menu-btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  width: 66%;
+  right: 0;
+  top: 0;
+  background: var(--darkest);
+  height: 100vh;
+  padding: 1em;
+}
+nav ul.primary-nav {
+  margin-top: 5em;
+}
+nav li a {
+  clear: both;
+  color: var(--light);
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  font-size: 1.2em;
+  text-align: right;
+}
+nav li a:hover {
+  font-weight: bold;
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: 1em;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 770px) {
+  .mobile-menu,
+  .mobile-menu-exit {
+    display: none;
+  }
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+    justify-content: unset;
+  }
+  .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: flex;
+  }
+  .navbar nav a {
+    color: var(--darkest);
+    font-size: 1em;
+    padding: 0.1em 1em;
+  }
+  .navbar nav ul.prinav {
+    margin: 0;
+  }
+  .navbar nav li.current a {
+    font-weight: bold;
+  }
+  .navbar nav li.go-premium a {
+    font-weight: bold;
+    border: 2.5px solid var(--light);
+    border-radius: 5em;
+  }
+  .navbar nav li.go-premium a:hover {
+    background: var(--darker);
+    color: var(--light);
+  }
+}
+@media only screen and (min-width: 900px) {
+  .container {
+    width: 900px;
+    margin: 0 auto;
+  }
+  section {
+    padding: 10em 4em;
+  }
+  .hero .container {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .hero .container .left-col {
+    margin: 3em 3em 0 5em;
+  }
+  .hero .container .left-col h1 {
+    font-size: 3em;
+    width: 90%;
+  }
+  .hero-img {
+    width: 30%;
+    margin-right: 8em;
+  }
+  .features {
+    position: relative;
+    padding: 6em;
+  }
+  ul.features-list {
+    display: block;
+    margin-left: 5em;
+  }
+  ul.features-list li {
+    font-size: 1.2em;
+  }
+  .features img {
+    display: block;
+    position: absolute;
+    right: 0;
+    width: 350px;
+    bottom: -2em;
+  }
+  .testimonials ul {
+    display: flex;
+  }
+  .testimonials ul li {
+    margin: 0 1em;
+  }
+  .contact-section {
+    position: relative;
+  }
+  .contact-section .container {
+    display: flex;
+  }
+  .contact-right {
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 45%;
+    height: 100%;
+    padding: 2em;
+  }
+  .contact-right iframe {
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 1190px) {
+  .features:before {
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 20em;
+    background: var(--filler);
+    left: 0;
+    top: -4em;
+  }
+  .features:after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 20em;
+    background: url("../images/dots.svg") no-repeat;
+    left: 4.5em;
+    top: 2em;
+  }
+  .contact-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    height: 100%;
+    padding: 2em;
+  }
+  .contact-right iframe {
+    height: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */
