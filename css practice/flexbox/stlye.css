@@ -1,0 +1,136 @@
+:root {
+    --darkest: #121417;
+    --darker: #18261C;
+    --dark: #5C946E;
+    --light: #F1FFE7;
+    --filler: #FBD24D;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--light);
+    background-color: var(--darkest);
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2 {
+    margin-bottom: 15px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.navbar {
+    background: var(--darkest);
+    color: var(--filler);
+    height: 60px;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+.logo {
+    font-size: x-large;
+    font-weight: bold;
+}
+.logo h1{
+    padding-top: 10px;
+}
+.logo h1 span {
+    color: var(--dark);
+}
+
+.navbar a {
+    color: var(--filler);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+.navbar a:hover{
+    color: var(--dark);
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%
+}
+
+.navbar ul {
+    display: flex;
+}
+.navbar ul li{
+    margin-left: 20px;
+}
+header{
+    background-color: var(--darker);
+    color: var(--light);
+    min-height: 400px;
+}
+header h1{
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    color: var(--dark);
+}
+
+header img{
+    max-width: 300px;
+    padding-top: 30px;
+}
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.boxes .container{
+    display: flex;
+    justify-content: space-between;
+}
+.box{
+    flex: 1;
+    margin: 20px;
+    padding: 20px 40px;
+    background: var(--dark);
+    border-radius: 10px;
+    box-shadow: 0 3px 5px var(--filler);
+}
+.box h2{
+    font-weight: bold;
+    color: var(--darker);
+    font-size: 1.5rem;
+}
+@media (max-width:768px) {
+    header .container{
+        flex-direction: column;
+        padding-top: 20px ;
+        text-align: center;
+    }
+    .boxes{
+        padding: 20px;
+    }
+    .boxes .container{
+        display: block;
+        text-align: center;
+    }
+    
+}
