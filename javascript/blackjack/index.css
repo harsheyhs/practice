@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: #243E36;
+    color: #E0EEC6;
+    min-width: 0;
+    text-align: center;
+}
+header{
+    background: #7CA982;
+    padding: 2em;
+    font-size: 1.3em;
+}
+header em {
+    font-size: 1.3em;
+    color:#C2A83E;
+    text-shadow: 2px 2px #E0EEC6;
+}
+main{
+    text-align: center;
+    margin-top: 2em;
+}
+#msg{
+    font-size: 1.5em;
+    background-color: #C2A83E;
+    padding: .6em 0;
+    display: block;
+    width: 50%;
+    margin: auto;
+    border-radius: 10px;
+    color: #243E36;
+}
+main h3{
+ font-size: 1.5em;
+ margin-top: 2em;
+}
+button{
+    margin-top: 2em;
+    padding: .5em;
+    border-radius: 5px;
+    background: #C2A83E;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #243E36;
+}
+#cards, #sum{
+    margin-top: 1em;
+    font-weight: bold;
+    font-size: 1.5em;
+}
