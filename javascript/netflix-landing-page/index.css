@@ -91,7 +91,7 @@ img {
 }
 .showcase-content h1{
     font-weight: 700;
-    font-size: 3.8rem;
+    font-size: 3.5rem;
     line-height: 1.1;
     margin:  0 0  2rem;
 }
@@ -104,8 +104,152 @@ img {
     margin: 0 0 2rem;
 }
 
+.tabs{
+    background-color: var(--dark-color);
+    padding-top: 1rem;
+    border-bottom: 3px solid #3d3d3d;
+}
+.tabs .container{
+    
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.tabs p{
+    font-size:1.1rem;
+    padding-top: .5rem;
+
+}
+.tabs .container> div{
+    padding:1rem 0;
+}
+.tabs .container> div:hover{
+    color:#fff;
+    cursor:pointer;
+}
+.tab-border{
+    border-bottom: 3px solid var(--primary-color);
+
+}
+.tab-content{
+    padding:3rem 0;
+    background-color: #000;
+    color:#fff;
+
+}
+
+#tab-2-content .tab-2-content-top{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    grid-gap:1rem;
+    justify-content:center;
+    align-items:center;
+    
+}
+#tab-2-content .tab-2-content-bottom{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-gap:2rem;
+    justify-content:center;
+    align-items:center;
+    margin-top:2rem;
+    text-align:center;
+}
+
+#tab-1-content .tab-1-content-inner{
+display: grid;
+grid-template-columns: 1fr .7fr;
+grid-gap:2rem;
+align-items:center;
+justify-content: center;
 
 
+}
+#tab-1-content,
+#tab-2-content,
+#tab-3-content{
+    display: none;
+}
+.show{
+    display: block !important;
+}
+.table{
+    width:100%;
+    margin-top:2rem;
+    border-collapse:collapse;
+    border-spacing: 0;
+}
+.table thead th{
+    text-transform:uppercase;
+    padding: .8rem;
+}
+.table tbody tr td{
+    color: #999;
+    padding: .8rem 1.2rem;
+    text-align:center;
+}
+.table tbody tr td:first-child{
+    text-align: left;
+}
+.table tbody tr:nth-child(odd){
+    background: #222;
+}
+.container{
+    max-width:75%;
+    margin:auto;
+    overflow:hidden;
+    padding:0 2rem;
+
+}
+
+.footer{
+    max-width:75%;
+    margin:1rem auto;
+    overflow:auto;
+
+}
+.footer, .footer a{
+    color:#999;
+    font-size:.9rem;
+}
+.footer p{
+    margin-bottom:1.5rem;
+
+}
+.footer-cols{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:2rem;
+}
+.footer li{
+    line-height:1.9;
+}
+
+.text-xl{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+   
+}
+.text-lg{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    
+}
+.text-md{
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    
+}
+
+.text-center{
+    text-align: center;
+}
+.text-dark{
+    color:#999;
+}
 .btn{
     display: inline-block;
     background: var(--primary-color);
@@ -136,4 +280,98 @@ img {
     padding: .8rem 1.3rem;
     text-transform: uppercase;
 
+}
+@media only screen and (max-width:960px){
+    .showcase{
+        height: 70vh;
+    }
+    .hide-sm{
+        display:none;
+    }
+    .showcase-top img{
+        top:30%;
+        left:5%;
+        transform:translate(0);
+    }
+    .showcase-content h1{
+        font-size:3.7rem;
+        line-height:1;
+    }
+    .showcase-content p{
+        font-size:1.5rem;
+    }
+    .btn-xl{
+        font-size:1.5rem;
+        padding:1.4rem 2rem;
+    }
+    .text-xl{
+        font-size:1.5rem;
+    }
+    .text-lg{
+        font-size:1.3rem;
+    }
+    .text-md{
+        font-size:1rem;
+    }
+    .footer .footer-cols{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (max-width:700px){
+   
+    #tab-1-content .tab-1-content-inner{
+        grid-template-columns: .8fr;
+        text-align:center;
+    }
+    #tab-2-content .tab-2-content-top{
+        display:block;
+        text-align:center;
+    }
+    #tab-2-content .tab-2-content-bottom{
+        grid-template-columns: 1fr;
+        
+    }
+    .showcase-content h1{
+        font-size: 3rem;
+    }
+    .showcase-content p{
+        font-size: 1.3rem;
+    }
+   
+    .btn-xl{
+        font-size: 1.2rem;
+        padding: 1.3rem 2rem;
+        text-transform: uppercase;
+    }
+    .text-lg{
+        font-size: 1.2rem;
+    }
+    .table{
+        display: grid;
+        grid-template-columns: 1fr;
+       
+    }
+} 
+@media(max-width:480px){
+   .table{
+    font-size: 1em;
+    border-collapse:separate
+   }
+   
+.table thead th{
+    text-transform:uppercase;
+    padding: 1em;
+    
+}
+.table tbody tr td{
+    color: #999;
+    padding: .4em ;
+    text-align:center;
+
+}
+.container{
+    padding: 0;
+    margin: 0 auto;
+    
+}
 }
