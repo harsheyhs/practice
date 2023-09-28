@@ -97,3 +97,13 @@ ul li:hover{
     color: #fff;
     cursor: pointer;
 }
+ul li.checked{
+    
+    background-color: #735422;
+    color: #fff;
+}
+ul li.checked::before{
+    content: '';
+    background-color: #735422;
+    color: #fff;
+}

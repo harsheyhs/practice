@@ -3,7 +3,7 @@ import { getDatabase,ref,push,onValue,remove } from "https://www.gstatic.com/fir
 
 
 const appSettings={
-    databaseURL:"https://mob-app-practice-default-rtdb.asia-southeast1.firebasedatabase.app/"
+    databaseURL:"https://risuto-38374-default-rtdb.asia-southeast1.firebasedatabase.app/"
 }
 
 const app=initializeApp(appSettings);
@@ -35,9 +35,8 @@ onValue(itemsdb,function(snapshot){
     for(let i=0;i<itemsInDb.length;i++)
     {
         let curritem=itemsInDb[i];
-       
+
         appendulel(curritem);
-        
     }
 }
 else{
@@ -54,6 +53,14 @@ function appendulel(item){
         let locatn=ref(database,`items/${item[0]}`);
         remove(locatn);
     })
+    newliel.addEventListener('click',()=>{
+        newliel.style.background='#735422'
+        newliel.style.color='#fff'
+    })
 
+   
     ulel.append(newliel);
 }
+
+
+
